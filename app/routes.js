@@ -53,7 +53,10 @@ module.exports = function(app) {
         var other           = req.body.other;
         var minAge          = req.body.minAge;
         var maxAge          = req.body.maxAge;
-        var favLang         = req.body.favlang;
+        var profession      = req.body.profession;
+        var weapons         = req.body.weapons;
+        var vehicles        = req.body.vehicles;
+        var supplies        = req.body.supplies;
         var reqVerified     = req.body.reqVerified;
 
         // Opens a generic Mongoose Query. Depending on the post body we will...

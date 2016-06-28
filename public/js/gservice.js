@@ -122,8 +122,101 @@ angular.module('gservice', [])
 
                 // Create a new map and place in the index.html page
                 var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 3,
-                    center: myLatLng
+                    zoom: 11,
+                    center: myLatLng,
+                    zoomControl: true,
+                    disableDoubleClickZoom: true,
+                    mapTypeControl: false,
+                    scaleControl: true,
+                    scrollwheel: true,
+                    panControl: false,
+                    streetViewControl: false,
+                    draggable : true,
+                    overviewMapControl: true,
+                    overviewMapControlOptions: {
+                        opened: true,
+            },
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+styles: [{
+              "featureType": "water",
+              "elementType": "geometry",
+              "stylers": [{ 
+                "color": "#687D60" }] 
+              },{
+              "featureType": "landscape",
+              "elementType": "geometry",
+              "stylers": [{ 
+                "color": "#7D6760" }] 
+              },{
+              "featureType": "road",
+              "elementType": "geometry",
+              "stylers": [{ 
+                "color": "#60767D" 
+                },{ 
+                "lightness": -37 }]
+              },{
+              "featureType": "poi",
+              "elementType": "geometry",
+              "stylers": [{ 
+                "color": "#49717f" }] 
+              },{
+              "featureType": "transit",
+              "elementType": "geometry",
+              "stylers": [{ 
+                "color": "#49717f" }] 
+              },{
+              "elementType": "labels.text.stroke",
+              "stylers": [{ 
+                "visibility": "on" 
+                },{ 
+                "color": "#226166" 
+                },{ 
+                "weight": 2 
+                },{ 
+                "gamma": 0.84 }]
+              },{
+              "elementType": "labels.text.fill",
+              "stylers": [{ 
+                "color": "#ffffff" }]
+              },{
+              "featureType": "administrative",
+              "elementType": "geometry",
+              "stylers": [{ 
+                "weight": 0.6 
+                },{ 
+                "color": "#1c4f54" }]
+              },{
+              "elementType": "labels.icon",
+              "stylers": [{ 
+                "visibility": "off" }]
+              },{
+              "featureType": "poi.park",
+              "elementType": "geometry",
+              "stylers": [{ 
+                "color": "#75607D" }] 
+              },{
+              "featureType": "administrative.locality",
+              "elementType": "labels",
+              "stylers": [{
+                "visibility": "on"}]
+              },{
+              "featureType": "administrative.neighborhood",
+              "elementType": "labels",
+              "stylers": [{
+                "visibility": "off"}]
+              },{
+              "featureType": "administrative.land_parcel",
+              "elementType": "labels",
+              "stylers": [{
+                "visibility": "off"}]
+              },{
+
+                      }],
+
+
+
+
+
                 });
             }
 
@@ -170,7 +263,7 @@ angular.module('gservice', [])
             google.maps.event.addListener(map, 'click', function(e){
                 var marker = new google.maps.Marker({
                     position: e.latLng,
-                    // animation: google.maps.Animation.BOUNCE,
+                    //animation: google.maps.Animation.BOUNCE,
                     map: map,
                     icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
                 });

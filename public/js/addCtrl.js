@@ -64,7 +64,12 @@ addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, g
             username: $scope.formData.username,
             gender: $scope.formData.gender,
             age: $scope.formData.age,
-            favlang: $scope.formData.favlang,
+            profession: $scope.formData.profession,
+            party: $scope.formData.party,
+            weapons: $scope.formData.weapons,
+            vehicles: $scope.formData.vehicles,
+            hideout: $scope.formData.hideout,
+            supplies: $scope.formData.supplies,
             location: [$scope.formData.longitude, $scope.formData.latitude],
             htmlverified: $scope.formData.htmlverified
         };
@@ -77,8 +82,12 @@ addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, g
                 $scope.formData.username = "";
                 $scope.formData.gender = "";
                 $scope.formData.age = "";
-                $scope.formData.favlang = "";
-
+                $scope.formData.profession = "";
+                $scope.formData.party = "";
+                $scope.formData.weapons = "";
+                $scope.formData.vehicles = "";
+                $scope.formData.hideout = "";
+                $scope.formData.supplies = "";
                 // Refresh the map with new data
                 gservice.refresh($scope.formData.latitude, $scope.formData.longitude);
             })

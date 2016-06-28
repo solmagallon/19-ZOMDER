@@ -7,7 +7,12 @@ var UserSchema = new Schema({
     username: {type: String, required: true},
     gender: {type: String, required: true},
     age: {type: Number, required: true},
-    favlang: {type: String, required: true},
+    profession: {type: String, required: true},
+    party: {type: Number, required: true},
+    weapons: {type: String, required: false},
+    vehicles: {type: String, required: false},
+    hideout: {type: String, required: true},
+    supplies: {type: String, required: false},
     location: {type: [Number], required: true}, // [Long, Lat]
     htmlverified: String,
     created_at: {type: Date, default: Date.now},
@@ -28,4 +33,4 @@ UserSchema.pre('save', function(next){
 UserSchema.index({location: '2dsphere'});
 
 // Exports the UserSchema for use elsewhere. Sets the MongoDB collection to be used as: "scotch-user"
-module.exports = mongoose.model('scotch-user', UserSchema);
+module.exports = mongoose.model('zombder-user', UserSchema);

@@ -42,7 +42,12 @@ queryCtrl.controller('queryCtrl', function($scope, $log, $http, $rootScope, geol
             other: $scope.formData.other,
             minAge: $scope.formData.minage,
             maxAge: $scope.formData.maxage,
-            favlang: $scope.formData.favlang,
+            profession: $scope.formData.profession,
+            party: $scope.formData.party,
+            weapons: $scope.formData.weapons,
+            vehicles: $scope.formData.vehicles,
+            hideout: $scope.formData.hideout,
+            supplies: $scope.formData.supplies,
             reqVerified: $scope.formData.verified
         };
 

@@ -6,7 +6,7 @@
 
         <!-- Panel Title -->
         <div class="panel-heading">
-            <h2 class="panel-title text-center">Find Teammates! (Map Query) <span class="glyphicon glyphicon-search"></span></h2>
+            <h2 class="panel-title text-center">Find Human Allies (Map Query) <span class="glyphicon glyphicon-search"></span></h2>
         </div>
 
         <!-- Panel Body -->
@@ -26,7 +26,7 @@
                 </div>
                 <div class="form-group">
                     <label for="distance">Max. Distance (miles)</label>
-                    <input type="text" class="form-control" id="distance" placeholder="500" ng-model="formData.distance">
+                    <input type="text" class="form-control" id="distance" placeholder="5" ng-model="formData.distance">
                 </div>
 
                 <!-- Note ng-true-value which translates check values into explicit gender strings -->
@@ -45,6 +45,21 @@
                         What's it to ya?
                     </label>
                 </div>
+                    <label>Fortified Hideout</label>
+                        <div class="form-group">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="optionsRadios" id="checkyes" value="Yes" ng-model="formData.yes" ng-true-value = "'Yes'">
+                                Yes
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="optionsRadios" id="checkno" value="no" ng-model="formData.no" ng-true-value="'no'">
+                        No
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="optionsRadios" id="checkother" value="Not saying" ng-model="formData.other" ng-true-value="'Not saying'">
+                        Not saying
+                    </label>
+                </div>
                 <div class="form-group">
                     <label for="minage">Min. Age</label>
                     <input type="number" class="form-control" id="minage" placeholder="5" ng-model="formData.minage">
@@ -53,10 +68,27 @@
                     <label for="maxage">Max Age</label>
                     <input type="number" class="form-control" id="maxage" placeholder="80" ng-model="formData.maxage">
                 </div>
-                <div class="form-group">
-                    <label for="favlang">Favorite Language</label>
-                    <input type="text" class="form-control" id="favlang" placeholder="Fortran" ng-model="formData.favlang">
+                    <div class="form-group">
+                    <label for="profession">Former profession</label>
+                    <input type="profession" class="form-control" id="profession" placeholder="electronics salesman" ng-model="formData.age" required>
                 </div>
+                <div class="form-group">
+                    <label for="weapons">Weapons in possesion</label>
+                    <input type="text" class="form-control" id="weapons" placeholder="Baseball Bat" ng-model="formData.weapons">
+                </div>
+                <div class="form-group">
+                    <label for="vehicles">Modified vehicles in possesion</label>
+                    <input type="text" class="form-control" id="vehicles" placeholder="Armored Bulldozer" ng-model="formData.vehicles">
+                </div>
+                    <div class="form-group">
+                    <label for="hideout">Fortified hideout?</label>
+                    <input type="text" class="form-control" id="hideout" placeholder="Yes/No" ng-model="formData.hideout">
+                </div>
+                    <div class="form-group">
+                    <label for="supplies">Food/Medical supplies in possesion?</label>
+                    <input type="text" class="form-control" id="supplies" placeholder="Pallet of Hotpockets" ng-model="formData.supplies">
+                </div>
+
                 <div class="form-group">
                     <div class="checkbox">
                         <label>

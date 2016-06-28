@@ -7,7 +7,7 @@ var UserSchema = new Schema({
     username: {type: String, required: true},
     gender: {type: String, required: true},
     age: {type: Number, required: true},
-    profession: {type: String, required: true},
+    profession: {type: String, required: false},
     party: {type: Number, required: true},
     weapons: {type: String, required: false},
     vehicles: {type: String, required: false},

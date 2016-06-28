@@ -72,7 +72,7 @@ angular.module('gservice', [])
 
                 // Create popup windows for each record
                 var  contentString = '<p><b>Username</b>: ' + user.username + '<br><b>Age</b>: ' + user.age + '<br>' +
-                    '<b>Gender</b>: ' + user.gender + '<br><b>Profession</b>: ' + user.profession + '<br><b>Party</b>: ' + user.party + '<br><b>Weapons</b>: ' + user.weapons + '<br><b>Vehicles</b> ' + user.vehicles + '<br><b>Hideout</b> ' + user.hideout + '<br><b>Supplies</b> ' + '</p> ';
+                    '<b>Gender</b>: ' + user.gender + '<br><b>profession</b>: ' + user.profession + '<br><b>party</b>: ' + user.party + '<br><b>weapons</b>: ' + user.weapons + '<br><b>vehicles</b>: ' + user.vehicles + '<br><b>hideout</b>: ' + user.hideout + '<br>' + '<br><b>supplies</b>: ' + user.supplies '<p>';
 
                 // Converts each of the JSON records into Google Maps Location format (Note Lat, Lng format).
                 locations.push(new Location(
@@ -140,7 +140,7 @@ angular.module('gservice', [])
                var marker = new google.maps.Marker({
                    position: n.latlon,
                    map: map,
-                   title: "",
+                   title: "Big Map",
                    icon: icon,
                });
 
@@ -157,7 +157,7 @@ angular.module('gservice', [])
             var initialLocation = new google.maps.LatLng(latitude, longitude);
             var marker = new google.maps.Marker({
                 position: initialLocation,
-                //animation: google.maps.Animation.BOUNCE,
+                animation: google.maps.Animation.BOUNCE,
                 map: map,
                 icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
             });
@@ -170,7 +170,7 @@ angular.module('gservice', [])
             google.maps.event.addListener(map, 'click', function(e){
                 var marker = new google.maps.Marker({
                     position: e.latLng,
-                    // animation: google.maps.Animation.BOUNCE,
+                    animation: google.maps.Animation.BOUNCE,
                     map: map,
                     icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
                 });

@@ -1,0 +1,166 @@
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #000;
+    background-image: url("../img/DarkZombie.jpg");
+    background-position: center top;
+    background-size: cover ;
+    background-repeat: no-repeat;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.content,
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+    color: #777;
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/* Supporting content */
+.content {
+    margin-top: 40px 0;
+}
+
+.content p + h4 {
+    margin-top: 28px;
+}
+
+/* Google Map! */
+#map {
+    height:1900px;
+    width:640px;
+}
+
+.mapbox {
+    hieght:100%;
+    with:100%;
+}
+
+
+/*#map {
+    height: 1050px;
+    width: 645px;
+}*/
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 1120px;
+    }
+
+    /* Remove the padding we set earlier */
+    .header,
+    .content,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+
+}
+
+
+
+.text-muted {
+  font-size: 50px;
+}
+
+
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  color: #fff;
+  background-color: #75607D;
+}
+
+.list-group-item.active > .badge,
+.nav-pills > .active > a > .badge {
+  color: #000;
+  background-color: #fff;
+}
+
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.btn-danger {
+  color: #fff;
+  background-color: #687D60;
+  border-color: #869b7d;
+}
+
+
+.btn-danger.disabled,
+.btn-danger[disabled],
+fieldset[disabled] .btn-danger,
+.btn-danger.disabled:hover,
+.btn-danger[disabled]:hover,
+fieldset[disabled] .btn-danger:hover,
+.btn-danger.disabled:focus,
+.btn-danger[disabled]:focus,
+fieldset[disabled] .btn-danger:focus,
+.btn-danger.disabled.focus,
+.btn-danger[disabled].focus,
+fieldset[disabled] .btn-danger.focus,
+.btn-danger.disabled:active,
+.btn-danger[disabled]:active,
+fieldset[disabled] .btn-danger:active,
+.btn-danger.disabled.active,
+.btn-danger[disabled].active,
+fieldset[disabled] .btn-danger.active {
+  background-color: #687D60;
+  border-color: #869b7d;
+  }
+
+
+  .btn-danger .badge {
+  color: #fff;
+  background-color: #fff;
+}
+
+
+.btn-danger:hover {
+  color: #fff;
+  background-color: #607359;
+  border-color: #687D60;
+}
+

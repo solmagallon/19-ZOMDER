@@ -129,7 +129,7 @@ angular.module('gservice', [])
                     mapTypeControl: false,
                     scaleControl: true,
                     scrollwheel: true,
-                    panControl: false,
+                    panControl: true,
                     streetViewControl: false,
                     draggable : true,
                     overviewMapControl: true,

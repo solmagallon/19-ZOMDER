@@ -9,7 +9,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css"/>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="../css/style.css"/>
 
     <!-- Google Maps API -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlOcvxhbX0g4n7CDoMODoL_UyA8YGU6wo"></script>
@@ -40,11 +40,13 @@
     <!-- Header Menu. Note use of headerCtrl -->
     <div class="header" ng-controller="headerCtrl">
 
-        <!-- Header items are made active upon selection -->
+        <!-- Header items are made active upon selection-->
         <ul class="nav nav-pills pull-right">
              <li ng-class="{ active: isActive('/join')}"><a href="/#/join">Add yourself to the Map</a></li>
             <li ng-class="{ active: isActive('/find')}"><a href="/#/find">Find Human Allies</a></li>
         </ul>
+
+
 
         <!-- Header Title -->
         <h3 class="text-muted">ZOMBD3R</h3>

@@ -11,7 +11,7 @@ var UserSchema = new Schema({
     party: {type: Number, required: true},
     weapons: {type: String, required: false},
     vehicles: {type: String, required: false},
-    hideout: {type: String, required: true},
+    hideout: {type: String, required: false},
     supplies: {type: String, required: false},
     location: {type: [Number], required: true}, // [Long, Lat]
     htmlverified: String,

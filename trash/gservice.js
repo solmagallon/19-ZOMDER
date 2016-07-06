@@ -71,8 +71,7 @@ angular.module('gservice', [])
                 var user = response[i];
 
                 // Create popup windows for each record
-                var  contentString = '<p><b>Username</b>: ' + user.username + '<br><b>Age</b>: ' + user.age + '<br>' +
-                    '<b>Gender</b>: ' + user.gender + '<br><b>profession</b>: ' + user.profession + '<br><b>party</b>: ' + user.party + '<br><b>weapons</b>: ' + user.weapons + '<br><b>vehicles</b>: ' + user.vehicles + '<br><b>hideout</b>: ' + user.hideout + '<br>' + '<br><b>supplies</b>: ' + user.supplies '<p>';
+                var  contentString = '<p><b>Username</b>: ' + user.username + '<br><b>Age</b>: ' + user.age + '<br>' + '<br><b>profession</b>: ' + user.profession + '<br><b>party</b>: ' + user.party + '<br><b>weapons</b>: ' + user.weapons + '<br><b>vehicles</b>: ' + user.vehicles + '<br><b>hideout</b>: ' + user.hideout + '<br>' + '<br><b>supplies</b>: ' + user.supplies '<p>';
 
                 // Converts each of the JSON records into Google Maps Location format (Note Lat, Lng format).
                 locations.push(new Location(
@@ -82,7 +81,6 @@ angular.module('gservice', [])
                         maxWidth: 320
                     }),
                     user.username,
-                    user.gender,
                     user.age,
                     user.profession,
                     user.party,
@@ -101,7 +99,6 @@ angular.module('gservice', [])
             this.latlon = latlon;
             this.message = message;
             this.username = username;
-            this.gender = gender;
             this.age = age;
             this.profession = profession;
             this.party = party;

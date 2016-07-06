@@ -48,9 +48,6 @@ module.exports = function(app) {
         var lat             = req.body.latitude;
         var long            = req.body.longitude;
         var distance        = req.body.distance;
-        var male            = req.body.male;
-        var female          = req.body.female;
-        var other           = req.body.other;
         var minAge          = req.body.minAge;
         var maxAge          = req.body.maxAge;
         var profession      = req.body.profession;
@@ -73,10 +70,6 @@ module.exports = function(app) {
 
         }
 
-        // ...include filter by Gender (all options)
-        if(male || female || other){
-            query.or([{ 'gender': male }, { 'gender': female }, {'gender': other}]);
-        }
 
         // ...include filter by Min Age
         if(minAge){
@@ -95,7 +88,7 @@ module.exports = function(app) {
 
         // ...include filter for HTML5 Verified Locations
         if(reqVerified){
-            query = query.where('htmlverified').equals("Yep (Thanks for giving us real data!)");
+            query = query.where('htmlverified').equals("Confirmed");
         }
 
         // Execute Query and Return the Query Results

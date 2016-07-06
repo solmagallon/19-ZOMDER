@@ -2,24 +2,24 @@
 
 module.exports = {
 
-    mongolab:
+  /*  mongolab:
     {
         name: "zombder-user-map-ec2",
-        url: "mongodb://scotch:scotchrocks@ds051853.mongolab.com:51853/mean-map-app",
+        url: "",
         port: 27017
     },
-
+*/
     local:
     {
         name: "zombder-user-map-local",
-        url: "mongodb://localhost/MeanMapApp",
+        url: "mongodb://localhost/ZombderMapApp",
         port: 27017
     },
 
     localtest:
     {
         name: "zombder-user-map-local",
-        url: "mongodb://localhost/MeanMapAppTest",
+        url: "mongodb://localhost/ZombderMapAppTest",
         port: 27017
     }
 

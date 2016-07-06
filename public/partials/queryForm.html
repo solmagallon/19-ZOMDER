@@ -29,7 +29,7 @@
                     <input type="text" class="form-control" id="distance" placeholder="5" ng-model="formData.distance">
                 </div>
 
-                <!-- Note ng-true-value which translates check values into explicit gender strings -->
+                <!-- Note ng-true-value which translates check values into explicit gender strings
                 <label>Gender</label>
                 <div class="form-group">
                     <label class="checkbox-inline">
@@ -44,22 +44,25 @@
                         <input type="checkbox" name="optionsRadios" id="checkother" value="What's it to ya?" ng-model="formData.other" ng-true-value="'What\'s it to ya?'">
                         What's it to ya?
                     </label>
-                </div>
-                    <label>Fortified Hideout</label>
-                        <div class="form-group">
-                            <label class="checkbox-inline">
-                                <input type="checkbox" name="optionsRadios" id="checkyes" value="Yes" ng-model="formData.yes" ng-true-value = "'Yes'">
-                                Yes
-                    </label>
+                </div>-->
+
+
+                <label>Fortified Hideout</label>
+                <div class="form-group">
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="optionsRadios" id="checkno" value="no" ng-model="formData.no" ng-true-value="'no'">
-                        No
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" name="optionsRadios" id="checkother" value="Not saying" ng-model="formData.other" ng-true-value="'Not saying'">
-                        Not saying
-                    </label>
-                </div>
+                            <input type="checkbox" name="optionsRadios" id="checkyes" value="Yes" ng-model="formData.yes" ng-true-value = "'Yes'">
+                            Yes
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="optionsRadios" id="checkno" value="no" ng-model="formData.no" ng-true-value="'No'">
+                            No
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="optionsRadios" id="checkother" value="Not saying" ng-model="formData.other" ng-true-value="'Not saying'">
+                            Not saying
+                        </label>
+                    </div>
+
                 <div class="form-group">
                     <label for="minage">Min. Age</label>
                     <input type="number" class="form-control" id="minage" placeholder="5" ng-model="formData.minage">
@@ -70,7 +73,7 @@
                 </div>
                     <div class="form-group">
                     <label for="profession">Former profession</label>
-                    <input type="profession" class="form-control" id="profession" placeholder="electronics salesman" ng-model="formData.age" required>
+                    <input type="profession" class="form-control" id="profession" placeholder="electronics salesman" ng-model="formData.age">
                 </div>
                 <div class="form-group">
                     <label for="weapons">Weapons in possesion</label>
@@ -79,15 +82,15 @@
                 <div class="form-group">
                     <label for="vehicles">Modified vehicles in possesion</label>
                     <input type="text" class="form-control" id="vehicles" placeholder="Armored Bulldozer" ng-model="formData.vehicles">
+                </div>
                 <div class="form-group">
-                    <label for="supplies">Food/Medical supplies in possesion?</label>
+                    <label for="supplies">Food/Medical supplies in possesion</label>
                     <input type="text" class="form-control" id="supplies" placeholder="Pallet of Hotpockets" ng-model="formData.supplies">
                 </div>
-
                 <div class="form-group">
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" name="verified" id="radiomale" value="True" ng-model="formData.verified"> <strong>Include Only HTML5 Verified Locations?</strong>
+                            <input type="checkbox" name="verified" id="radiomale" value="True" ng-model="formData.verified"> <strong>Include only verified locations?</strong>
                         </label>
                     </div>
                 </div>
@@ -99,7 +102,7 @@
 
         <!-- Footer panel for displaying count. Note how it will only display if queryCount is greater than 0 -->
         <div ng-show="queryCount>0" class="panel-footer">
-                <p class="text-center">Hot Dang! We Found {{queryCount}} Teammates.</p>
+            <p class="text-center">Lock 'n load! We found {{queryCount}} survivors.</p>
         </div>
     </div>
 </div>

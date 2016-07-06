@@ -20,6 +20,7 @@
                     <label for="username">Name <span class="badge"></span></label>
                     <input type="text" class="form-control" id="username" placeholder="Shaun Riley " ng-model="formData.username" required>
                 </div>
+                <!-- Gender query disabled
                 <label class="radio control-label">Gender</label>
                 <div class="radio">
                     <label>
@@ -39,6 +40,8 @@
                         What's it to ya?
                     </label>
                 </div>
+                                <!-- Gender query disabled-->
+
                 <div class="form-group">
                     <label for="age">Age</label>
                     <input type="number" class="form-control" id="age" placeholder="42" ng-model="formData.age">
@@ -47,7 +50,7 @@
                     <label for="profession">Former profession</label>
                     <input type="profession" class="form-control" id="profession" placeholder="electronics salesman" ng-model="formData.profession" required>
                 </div>
-                    <div class="form-group">
+                <div class="form-group">
                     <label for="party">Number of people in party</label>
                     <input type="number" class="form-control" id="party" placeholder="1" ng-model="formData.party" required>
                 </div>
@@ -55,7 +58,7 @@
                     <label for="weapons">Weapons in possesion</label>
                     <input type="text" class="form-control" id="weapons" placeholder="Baseball Bat" ng-model="formData.weapons">
                 </div>
-                    <div class="form-group">
+                <div class="form-group">
                     <label for="vehicles">Modified vehicles in possesion</label>
                     <input type="text" class="form-control" id="vehicles" placeholder="Armored Bulldozer" ng-model="formData.vehicles">
                 </div>
@@ -93,7 +96,8 @@
                 <div class="form-group">
                     <!-- Note RefreshLoc button tied to addCtrl. This requests a refresh of the HTML5 verified location. -->
                     <label for="verified">Set current location <span><button ng-click="refreshLoc()" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-refresh"></span></button></span></label>
-                    <input type="text" class="form-control" id="verified" placeholder= "Nope (Thanks for spamming my map...)" ng-model="formData.htmlverified" readonly>
+                    <input type="text" class="form-control" id="verified" ng-model="formData.htmlverified" readonly>
+                    
                 </div>
 
                 <!-- Submit button. Note that its tied to createUser() function from addCtrl. Also note ng-disabled logic which prevents early submits.  -->

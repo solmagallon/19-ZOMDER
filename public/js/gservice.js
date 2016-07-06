@@ -72,7 +72,7 @@ angular.module('gservice', [])
 
                 // Create popup windows for each record
                 var  contentString = '<p><b>Username</b>: ' + user.username + '<br><b>Age</b>: ' + user.age + '<br>' +
-                    '<b>Gender</b>: ' + user.gender + '<br><b>Profession</b>: ' + user.profession + '<br><b>Party</b>: ' + user.party + '<br><b>Weapons</b>: ' + user.weapons + '<br><b>Vehicles</b> ' + user.vehicles + '<br><b>Hideout</b> ' + user.hideout + '<br><b>Supplies</b> ' + '</p> ';
+                    '<b>Gender</b>: ' + user.gender + '<br><b>Profession</b>: ' + user.profession + '<br><b>Party</b>: ' + user.party + '<br><b>Weapons</b>: ' + user.weapons + '<br><b>Vehicles</b> ' + user.vehicles + '<br><b>Hideout</b> ' + user.hideout + '<br><b>Supplies</b> ' + user.supplies +'</p> ';
 
                 // Converts each of the JSON records into Google Maps Location format (Note Lat, Lng format).
                 locations.push(new Location(
@@ -123,11 +123,11 @@ angular.module('gservice', [])
                   zoom: 11,
                   center: myLatLng,
                   zoomControl: true,
-                  disableDoubleClickZoom: true,
+                  disableDoubleClickZoom: false,
                   mapTypeControl: false,
                   scaleControl: true,
                   scrollwheel: true,
-                  panControl: true,
+                  panControl: false,
                   streetViewControl: false,
                   draggable : true,
                   overviewMapControl: true,

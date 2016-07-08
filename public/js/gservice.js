@@ -212,6 +212,7 @@ angular.module('gservice', [])
               });
             }
 
+
             // If a filter was used set the icons yellow, otherwise blue
             if(filter){
                 icon = "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png";
@@ -285,20 +286,26 @@ angular.module('gservice', [])
 
 
 
-//TEST
 
 
-var heatmapLayer = new google.maps.HeatMapLayer();
-heatmapLayer.setMap(map);
 
 
-var map, heatmap;
+
+
+
+
+
+
+
+//HEATMAP TEST tread lightly
+
+      var map, heatmap;
 
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           zoom: 13,
           center: {lat: 37.775, lng: -122.434},
-          mapTypeId: google.maps.MapTypeId.SATELLITE
+          mapTypeId: google.maps.MapTypeId.ROADMAP
         });
 
         heatmap = new google.maps.visualization.HeatmapLayer({
@@ -310,6 +317,8 @@ var map, heatmap;
       function toggleHeatmap() {
         heatmap.setMap(heatmap.getMap() ? null : map);
       }
+
+
 
       function changeGradient() {
         var gradient = [
@@ -339,7 +348,10 @@ var map, heatmap;
         heatmap.set('opacity', heatmap.get('opacity') ? null : 0.2);
       }
 
-      // Heatmap data: 500 Points
+
+
+
+  // Heatmap data: 500 Points
       function getPoints() {
         return [
           new google.maps.LatLng(37.782551, -122.445368),
@@ -844,3 +856,8 @@ var map, heatmap;
           new google.maps.LatLng(37.751266, -122.403355)
         ];
       }
+
+
+
+
+//TEST END

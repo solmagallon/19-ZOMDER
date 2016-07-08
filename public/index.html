@@ -29,6 +29,11 @@
     <script src="js/addCtrl.js"></script>
     <script src="js/queryCtrl.js"></script>
     <script src="js/headerCtrl.js"></script>
+
+    <!--NG Input-->
+    <script src='../bower_components/ng-input/dist/ng-input.js'></script>
+
+
 </head>
 
 <body>
@@ -36,42 +41,40 @@
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<div class="container">
-    <!-- Header Menu. Note use of headerCtrl -->
-    <div class="header" ng-controller="headerCtrl">
+    <div class="container">
+        <!-- Header Menu. Note use of headerCtrl -->
+        <div class="header" ng-controller="headerCtrl">
 
-        <!-- Header items are made active upon selection-->
-        <ul class="nav nav-pills pull-right">
-             <li ng-class="{ active: isActive('/join')}"><a href="/#/join">Add yourself to the Map</a></li>
-            <li ng-class="{ active: isActive('/find')}"><a href="/#/find">Find Human Allies</a></li>
-        </ul>
+            <!-- Header items are made active upon selection-->
+            <ul class="nav nav-pills pull-right">
+                 <li ng-class="{ active: isActive('/join')}"><a href="/#/join">Add yourself to the Map</a></li>
+                <li ng-class="{ active: isActive('/find')}"><a href="/#/find">Find Human Allies</a></li>
+            </ul>
 
 
 
-        <!-- Header Title -->
-        <h3 class="text-muted">ZOMBD3R</h3>
-    </div>
-
-    <!-- Map and Side Panel -->
-    <div class="row content">
+            <!-- Header Title -->
+            <h3 class="text-muted">ZOMBD3R
+            </h3>
+        </div>
+        <!-- Map and Side Panel -->
+        <div ng-view>
+        </div>
 
         <!-- Google Map -->
         <div class="col-md-7">
-            <div id="map"></div>
+            <div class="row content">
+                <div id="map">
+                </div>
+            </div>
+
         </div>
 
-        <!-- Side Panel (Controlled by ng-view) -->
-        <div style="opacity: .8 " ng-view></div>
+        <!-- Footer -->
+        <div class="footer">
+        </div>
 
     </div>
-    <hr/>
-
-    <!-- Footer -->
-    <div class="footer">
-
-    </div>
-
-</div>
 
 </body>
 </html>

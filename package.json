@@ -12,4 +12,7 @@
         "jsonwebtoken": "^5.0.2",
         "method-override": "~2.1.2"
     }
+    "scripts": {
+    "start": "node server.js"
+  },
 }

@@ -1,0 +1,10 @@
+
+
+
+To connect using the mongo shell:
+
+mongo ds021994.mlab.com:21994/zombd3r -u electronfarmer -p Backfire998
+
+To connect using a driver via the standard MongoDB URI (what's this?):
+
+  mongodb://electronfarmer:Backfire998@ds021994.mlab.com:21994/zombd3r

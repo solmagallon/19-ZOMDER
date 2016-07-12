@@ -12,6 +12,7 @@ var app             = express();
 // Express Configuration
 // -----------------------------------------------------
 // Sets the connection to MongoDB
+// mongoose.connect(process.env.MONGODB_URI || database.localtest.url)
 mongoose.connect(database.localtest.url);
 
 // Logging and Parsing
